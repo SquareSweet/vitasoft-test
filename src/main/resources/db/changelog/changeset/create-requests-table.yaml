@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-requests
+      author: SquareSweet
+      changes:
+        - createTable:
+            tableName: requests
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_requests_users
+                    references: users(id)
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: text
+                  type: varchar(2000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: state
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_on
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sent_on
+                  type: timestamp
