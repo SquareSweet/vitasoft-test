@@ -34,6 +34,13 @@ public class SecurityConfig {
                                 .antMatchers("/api/v1/oper/**").hasAnyRole("OPERATOR")
                                 .antMatchers("/api/v1/user/**").hasAnyRole("USER")
                                 .antMatchers("/api/v1/auth/**").permitAll()
+                                .antMatchers(
+                                        "/swagger-ui/**",
+                                        "/swagger-ui.html",
+                                        "/v2/api-docs/**",
+                                        "/v3/api-docs/**",
+                                        "/actuator/**"
+                                ).permitAll()
                                 .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(httpSecuritySessionManagementConfigurer ->
