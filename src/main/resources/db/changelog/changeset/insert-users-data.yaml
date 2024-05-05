@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users
+      author: SquareSweet
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'admin'
+              - column:
+                  name: password
+                  value: '$2a$10$Qo5pn2RKdcbcRTNMjbBIB.rYQghj1HbVgBd7YZ0IQT4jwhTWVyJDu'
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'operadmin'
+              - column:
+                  name: password
+                  value: '$2a$10$Sprm8/9WE5ZBNh7LkY/18eIbrt/ZTDIbr4QYc91z4k0ZIHJN5D.Gi'
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'oper'
+              - column:
+                  name: password
+                  value: '$2a$10$uRc5RnFIF8XTuO6IAuhFR.eoP3Ce8JHq5WFFqmQ82IMl.uwMVJxl2'
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'userone'
+              - column:
+                  name: password
+                  value: '$2a$10$w9VzXq7k2pgJH455859Ibu2q5pc4jbxAcd5PPKRYagAmaYuLU6j8e'
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'usertwo'
+              - column:
+                  name: password
+                  value: '$2a$10$.RvlQ4pi2db1hZDh1Q5TtOHi4cwEn9rhwrlMCOtcAtvUn3b8f3pT2'
